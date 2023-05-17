@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wraper {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #0af;
+}
+.image__cloud {
+    position: absolute;
+    width: 20%;
+    // height: 20%;
+    top: 40%;
+    left: 70%;
+}
+.image__balloon {
+    position: absolute;
+    width: 20%;
+    // height: 20%;
+    top: 30%;
+    left: 30%;
+}
