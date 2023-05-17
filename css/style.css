@@ -14,13 +14,52 @@
 .image__cloud {
   position: absolute;
   width: 20%;
-  top: 40%;
-  left: 70%;
 }
 
 .image__balloon {
   position: absolute;
   width: 20%;
+}
+
+.image__cloud:nth-child(1) {
+  top: 15%;
+  left: 10%;
+  z-index: 1;
+}
+
+.image__cloud:nth-child(2) {
+  top: 25%;
+  left: 25%;
+  z-index: 1;
+}
+
+.image__cloud:nth-child(3) {
+  top: 20%;
+  left: 35%;
+}
+
+.image__cloud:nth-child(4) {
   top: 30%;
-  left: 30%;
+  left: 55%;
+  z-index: 1;
+}
+
+.image__cloud:nth-child(5) {
+  top: 35%;
+  left: 15%;
+}
+
+.image__cloud:nth-child(6) {
+  top: 20%;
+  left: 60%;
+}
+
+.image__balloon:nth-child(7) {
+  top: 15%;
+  left: 20%;
+}
+
+.image__balloon:nth-child(8) {
+  top: 30%;
+  left: 50%;
 }/*# sourceMappingURL=style.css.map */
