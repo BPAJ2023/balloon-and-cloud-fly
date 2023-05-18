@@ -1,0 +1,1 @@
+const mouseMove = new MouseMove;

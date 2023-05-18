@@ -1,19 +1,29 @@
 class MouseMove {
-    constructor(event){
+    constructor(){
         this.images = document.querySelectorAll("img");
-        this.addLissenerMouseMove(event)
+
+        this.addLissenerMouseMove();
     }
-    moveImage(e,x,y){
+    moveImage(x,y){
         this.images.forEach(img=>{
-            img.style.transform = `translate(${x},${y})`
+            const ratioX = parseFloat(img.getAttribute("ratioX"));
+            const ratioY = parseFloat(img.getAttribute("ratioY"));
+
+            const endX = x * ratioX;
+            const endY = y * ratioY;
+
+            img.style.transform = `translate(${endX}px,${endY}px)`;
         });
     };
-    addLissenerMouseMove(event){
-        const moveX = e.clientX;
-        const moveY = e.clientY;
-        this.images.forEach(image=>{
-            image.addEventListener('mousemove', (e)=>{this.moveImage(e,moveX,moveY)});
-        });
-    }
+    addLissenerMouseMove(){
+        document.addEventListener('mousemove', (e)=>{
+            const moveX = e.clientX;
+            const moveY = e.clientY;
+            const pageX = window.innerWidth/ 2;
+            const pageY = window.innerHeight/ 2;
+            const x = moveX - pageX;
+            const y = moveY - pageY;
+
+            this.moveImage(x,y)});
+    };
 }
-const move = new MouseMove(event);
